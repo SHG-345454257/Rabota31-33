@@ -1,5 +1,5 @@
+//создаем случайный секрет для JWT или других ключей
 import crypto from "crypto";
-
 export default function generateSecret(name) {
   if (process.env.NODE_ENV === "production") {
     throw new Error(`${name} должен быть установлен в переменных окружения в режиме production`);
