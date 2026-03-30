@@ -1,3 +1,4 @@
+//роуты для работы с пользователями (получение, обновление, удаление)
 import { Router } from "express";
 import { getAllUsers, getUserById } from "../controllers/userController.js";
 import authenticate from "../middleware/authenticate.js";
