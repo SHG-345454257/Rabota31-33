@@ -1,3 +1,4 @@
+// подключение к базе данных SQLite через better-sqlite3
 import Database from "better-sqlite3";
 import config from "../config.js";
 
@@ -6,7 +7,7 @@ const db = new Database(config.db.path, {
 });
 
 db.pragma("foreign_keys = ON");
-
+// создаем таблицы пользователей и токенов, если их ещё нет
 db.exec(`
   CREATE TABLE IF NOT EXISTS users (
     id            INTEGER PRIMARY KEY AUTOINCREMENT,
