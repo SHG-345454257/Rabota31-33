@@ -1,3 +1,4 @@
+//настраиваем express‑сервер. подключаем роуты и документацию
 import express from "express";
 import config from "./config.js";
 import helmet from "helmet";
