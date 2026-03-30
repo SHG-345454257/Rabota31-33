@@ -2,7 +2,7 @@ import * as authService from "../services/authService.js";
 import jwt from "jsonwebtoken";
 import config from "../config.js";
 import AppError from "../utils/appError.js";
-
+//функция регистрации нового пользователя
 export async function register(req, res, next) {
   try {
     const { email, password } = req.body;
@@ -14,7 +14,7 @@ export async function register(req, res, next) {
     next(error);
   }
 }
-
+// ф-ия авторизации пользователя и выдачи токена
 export async function login(req, res, next) {
   try {
     const { email, password } = req.body;
@@ -35,6 +35,8 @@ export async function login(req, res, next) {
     next(error);
   }
 }
+
+// ф-ия обновления токена пользователя
 export async function refresh(req, res, next) {
   try {
     const rawToken = req.cookies.refreshToken;
@@ -50,7 +52,7 @@ export async function refresh(req, res, next) {
     next(error);
   }
 }
-
+// и ещё ф-ия для выхода
 export async function logout(req, res, next) {
   try {
     const rawToken = req.cookies.refreshToken;
