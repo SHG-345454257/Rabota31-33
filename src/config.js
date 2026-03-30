@@ -1,3 +1,4 @@
+//основные настройки сервера (порт, JWT, cookie, CORS, БД)
 import "dotenv/config";
 import generateSecret from "./utils/generateSecret.js";
 
