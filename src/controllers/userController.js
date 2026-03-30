@@ -1,3 +1,4 @@
+// функции для работы с пользователями
 import AppError from "../utils/appError.js";
 import * as userService from "../services/userService.js";
 
