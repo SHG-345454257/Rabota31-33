@@ -1,5 +1,5 @@
 import "dotenv/config";
-
+//запускаем сервер + вывод
 import app from "./src/app.js";
 import config from "./src/config.js";
 import db from "./src/db/db.js";
