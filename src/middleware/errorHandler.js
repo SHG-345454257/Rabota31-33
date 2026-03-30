@@ -1,3 +1,4 @@
+// обрабатывает ошибки и отправляет клиенту ответ с сообщением
 const errorHandler = (err, req, res, next) => {
   if (err.isOperational) {
     return res.status(err.statusCode).json({
@@ -5,12 +6,10 @@ const errorHandler = (err, req, res, next) => {
       message: err.message,
     });
   }
-
   console.error("Необработанная ошибка:", err);
   res.status(500).json({
     status: "error",
     message: "Что-то пошло не так. Пожалуйста, попробуйте позже.",
   });
 };
-
 export default errorHandler;
